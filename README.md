@@ -19,7 +19,8 @@ Singleton
 - Define uma operação responsável por garantir o acesso a uma única instância.
 - Responsável por criar e manter sua própria instância única.
 
-### Factory Method - Método de fabrica
+Factory Method - Método de fabrica
+------------
 
 > "Abstrações não devem depender de detalhes; Detalhes devem depender de abstrações"
 
