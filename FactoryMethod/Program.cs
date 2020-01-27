@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FactoryMethod.Equipamentos.Factories;
+using FactoryMethod.Util.Enumeraveis;
+using System;
 
 namespace FactoryMethod
 {
@@ -6,21 +8,21 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            FactoryMethod factory = new FactoryMethod();
-
-            Console.WriteLine("Escolha seu personagem");
+            Console.WriteLine("Escolha seu equipamento");
             Console.WriteLine();
-            Console.WriteLine("Liu Kang | Sub-Zero | Scorpion");
+            Console.WriteLine("0 - Armadura" +
+                "\n1 - Bota" +
+                "\n2 - Capacete");
             Console.WriteLine();
 
-            string escolha = Console.ReadLine();
+            var escolha = int.Parse(Console.ReadLine());
 
-            IPersonagem personagem = factory.EscolherPersonagem(escolha);
+            var equipamento = EquipamentoFactory.ObterEquipamento((TipoEquipamento)escolha, RaridadeEquipamento.Comum);
 
             Console.WriteLine();
-            Console.Write("Voce vai jogar com ");
+            Console.Write("Valor do equipamento encontrado ");
 
-            personagem.Escolhido();
+            Console.Write(equipamento.ObterValorEquipamento());
 
             Console.ReadKey();
         }
