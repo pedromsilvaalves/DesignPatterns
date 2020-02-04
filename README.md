@@ -52,4 +52,25 @@ Abstract Factory - Fabrica abstrata
 - Utilizado quando temos várias objetos e várias famílias de objetos
 - A complexidade é mais alta em função das várias classes e interfaces criadas
 
+Builder - Construtor
+------------
+
+### Design pattern de criação
+
+### Definição
+- Separe a construção de um objeto complexo de sua representação para que o mesmo processo de construção possa criar diferentes representações.
+
+### Problema
+- Criação de classes muito complexas, que normalmente envolvem muitos parâmetros específicas, que na grande maioria das vezes não é utilizado, mas está lá
+- Construtores gigantes, com vários parâmetros muitas vezes não utilizados e inicialização e configuração do objeto espalhados
+
+### Objetivo
+- Separar a parte de construção do objeto de dentro da classe e delega essa responsabilidade para a classe builder, permitindo criar classes que definem passo a passo a construção de objetos complexos
+
+### Caracteristicas
+- Permite variar a representação interna de um produto
+- Encapsula o código entre construção e representação
+- Provê controle durante o processo de construção
+- Requer criar um concrete builder específico para cada instância diferente do produto
+
 
