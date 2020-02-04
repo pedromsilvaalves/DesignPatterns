@@ -35,3 +35,21 @@ Factory Method - Método de fabrica
 
 ### Caracteristicas:
 - O Factory Method dispoe uma interface que cria um objeto, mas são as subclasses, que iram decidir qual classe concreta instanciar
+
+
+Abstract Factory - Fabrica abstrata
+------------
+
+### Design pattern de criação
+
+### Problema:
+- É preciso criar objetos que podem ter várias famílias de maneira consistente para não enviar objetos de famílias erradas
+
+### Objetivo:
+- Diferenciar cada objeto das famílias por interfaces e construir implementações de cada uma das famílias e depois construir uma implementação que vai retornar apenas objetos da mesma família
+
+### Caracteristicas:
+- Utilizado quando temos várias objetos e várias famílias de objetos
+- A complexidade é mais alta em função das várias classes e interfaces criadas
+
+
