@@ -6,7 +6,7 @@ using AbstractFactory.Talentos.Implementacoes;
 
 namespace AbstractFactory.Personagens.Factories
 {
-    public class GuerreiroFactory : PersonagemFactory
+    public class GuerreiroFactory : PersonagemAbstractFactory
     {
         public override ArvoreHabilidadesAbstrato CriarArvoreHabilidades()
         {

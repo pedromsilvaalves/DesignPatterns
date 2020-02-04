@@ -9,7 +9,7 @@ using System.Text;
 
 namespace AbstractFactory.Personagens.Factories
 {
-    public class LadinoFactory : PersonagemFactory
+    public class LadinoFactory : PersonagemAbstractFactory
     {
         public override ArvoreHabilidadesAbstrato CriarArvoreHabilidades()
         {

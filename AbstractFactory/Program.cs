@@ -9,9 +9,9 @@ namespace AbstractFactory
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            var guerreiro = PersonagemAbstractFactory.CriarPersonagem(TipoPersonagens.Guerreiro);
-            var ladino = PersonagemAbstractFactory.CriarPersonagem(TipoPersonagens.Ladino);
-            var mago = PersonagemAbstractFactory.CriarPersonagem(TipoPersonagens.Mago);
+            var guerreiro = PersonagemFactory.CriarPersonagem(TipoPersonagens.Guerreiro);
+            var ladino = PersonagemFactory.CriarPersonagem(TipoPersonagens.Ladino);
+            var mago = PersonagemFactory.CriarPersonagem(TipoPersonagens.Mago);
 
             Console.ReadKey();
         }

@@ -6,7 +6,7 @@ using AbstractFactory.Talentos.Implementacoes;
 
 namespace AbstractFactory.Personagens.Factories
 {
-    public class MagoFactory : PersonagemFactory
+    public class MagoFactory : PersonagemAbstractFactory
     {
         public override ArvoreHabilidadesAbstrato CriarArvoreHabilidades()
         {
