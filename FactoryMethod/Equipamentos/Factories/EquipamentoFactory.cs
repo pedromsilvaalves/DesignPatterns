@@ -7,21 +7,29 @@ using System.Text;
 
 namespace FactoryMethod.Equipamentos.Factories
 {
-    public static class EquipamentoFactory
+    public abstract class EquipamentoFactory
     {
         public static EquipamentoAbstrato ObterEquipamento(TipoEquipamento tipoEquipamento, RaridadeEquipamento raridadeEquipamento)
         {
+            EquipamentoFactory equipamentoFactory;
             switch(tipoEquipamento)
             {
                 case TipoEquipamento.Armadura:
-                    return new Armadura(raridadeEquipamento, 100);
+                    equipamentoFactory = new ArmaduraFactory();
+                    break;
                 case TipoEquipamento.Bota:
-                    return new Bota(raridadeEquipamento, 100);
-                case TipoEquipamento.Capacete: 
-                    return new Capacete(raridadeEquipamento, 100);
+                    equipamentoFactory = new BotaFactory();
+                    break;
+                case TipoEquipamento.Capacete:
+                    equipamentoFactory = new CapaceteFactory();
+                    break;
                 default:
                     return null;
             }
+
+            return equipamentoFactory.CriarEquipamento(raridadeEquipamento);
         }
+
+        public abstract EquipamentoAbstrato CriarEquipamento(RaridadeEquipamento raridadeEquipamento);
     }
 }
