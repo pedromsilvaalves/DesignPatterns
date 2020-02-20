@@ -4,13 +4,13 @@ using System.Collections.Generic;
 
 namespace Builder.Criaturas.Builders.Implementacoes
 {
-    public class BandidoBuilder : ICriaturaBuilder
+    public class ElementalBuilder : ICriaturaBuilder
     {
         private Criatura criatura;
         public void CriarBase()
         {
-            this.criatura.nome = "Bandido";
-            this.criatura.tipoCriatura = TipoCriatura.Bandido;
+            this.criatura.nome = "Elemental";
+            this.criatura.tipoCriatura = TipoCriatura.Elemental;
             this.criatura.atributos = new List<Atributo>();
         }
 
@@ -24,12 +24,12 @@ namespace Builder.Criaturas.Builders.Implementacoes
             this.criatura.atributos.Add(new Componentes.Atributo
             {
                 Nome = TipoAtributo.Vantagem,
-                Valor = "Stealth"
+                Valor = "Resistência Física"
             });
             this.criatura.atributos.Add(new Componentes.Atributo
             {
                 Nome = TipoAtributo.Vulnerabilidade,
-                Valor = "Justiça"
+                Valor = "Magia"
             });
         }
 
